@@ -8,10 +8,10 @@ public class VirtualPetApplication {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         System.out.println("Please choose your new pets: 1. Dog; 2. Cat; 3. Bird; 4. Fish; 5. Snake.");
-        int choice_1 = scanner.nextInt();
+        int choice1 = scanner.nextInt();
 
         String pet = "";
-        switch (choice_1) {
+        switch (choice1) {
 
             case 1:
                 pet = "Dog";
@@ -45,7 +45,7 @@ public class VirtualPetApplication {
         scanner.nextLine();
         String petName = scanner.nextLine();
 
-        Pets myPet = new Pets(petName);
+        VirtualPets myPet = new VirtualPets(petName);
 
         while (!exit) {
 
@@ -57,6 +57,7 @@ public class VirtualPetApplication {
             if (myPet.getSickness() > 100 || myPet.getHunger() > 200 || myPet.getThirst() > 200) {
                 System.out.println("Sorry! Game over!");
                 exit = true;
+                break;
 
             }
 
@@ -99,9 +100,9 @@ public class VirtualPetApplication {
             System.out.println("7. Do not thing.");
             System.out.println("8. Exit the game!");
 
-            int choice_2 = scanner.nextInt();
+            int choice2 = scanner.nextInt();
 
-            switch (choice_2) {
+            switch (choice2) {
                 case 1:
                     myPet.feed();
                     System.out.println(myPet.getName() + " has been fed.\n");

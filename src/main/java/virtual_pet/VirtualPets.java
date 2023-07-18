@@ -1,6 +1,6 @@
 package virtual_pet;
 
-public class Pets {
+public class VirtualPets {
     private String name;
     private int hunger;
     private int thirst;
@@ -9,7 +9,7 @@ public class Pets {
     private int sickness;
     private int day;
 
-    public Pets(String name) {
+    public VirtualPets(String name) {
         this.name = name;
         this.hunger = (int) (Math.random() * 100 + 1);
         this.thirst = (int) (Math.random() * 100 + 1);
